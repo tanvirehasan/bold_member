@@ -1,0 +1,11 @@
+.from_header img{
+    width: 15%;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .from_header img{
+        width: 40%;
+        margin-top: 25px;
+    }
+}
