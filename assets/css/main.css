@@ -3,6 +3,54 @@
 
 }
 
+
+/* Success window  */
+.successpage{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(230, 230, 230);
+}
+
+.successpage .check{
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(7, 126, 60);
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.successpage h2{
+    color: rgb(7, 126, 60);
+    font-size: 100px;
+    font-weight: bold;
+}
+
+
+table tr td,th{
+    text-align: left !important;
+    margin: 0px !important;
+    padding: 10px !important;
+}
+
+
+.lines{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 600px) {
     .from_header img{
         width: 40%;

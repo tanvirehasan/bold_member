@@ -1,3 +1,8 @@
+<?php 
+    include "config/conn.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,53 +31,53 @@
 </div>
 
     
-        <form class="row g-3 p-5">
+        <form class="row g-3 p-5" method="post" id="newmember" enctype="multipart/form-data">
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Name</label>
-                <input type="email" class="form-control" id="inputEmail4">
+                <input type="text" name="name" class="form-control" id="inputEmail4">
             </div>
             <div class="col-md-6">
                 <label for="inputPassword4" class="form-label">Phone Number</label>
-                <input type="password" class="form-control" id="inputPassword4">
+                <input type="text" name="phone_number" class="form-control" id="inputPassword4">
             </div>
 
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4">
+                <input type="email" name="email" class="form-control" id="inputEmail4">
             </div>
             <div class="col-md-6">
                 <label for="inputPassword4" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword4">
+                <input type="password" name="password" class="form-control" id="inputPassword4">
             </div>
 
             <div class="col-md-6">
                 <label for="Dateofbirth" class="form-label">Date of birth</label>
-                <input type="date" class="form-control" id="Dateofbirth">
+                <input type="date" name="date_of_birth" class="form-control" id="Dateofbirth">
             </div>
             <div class="col-md-6">
                 <label for="profile" class="form-label">Profile Link</label>
-                <input type="text" class="form-control" id="profile" placeholder="Facebook/Linkedin/Twitter..">
+                <input type="text" name="profile_url" class="form-control" id="profile" placeholder="Facebook/Linkedin/Twitter..">
             </div>
 
             <div class="col-12">
                 <label for="inputAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
             </div>
 
             <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
+                <label for="inputCity" class="form-label">Country</label>
+                <input type="text" name="country" class="form-control" id="inputCity">
             </div>
             <div class="col-md-4">
-                <label for="inputState" class="form-label">State</label>
-                <select id="inputState" class="form-select">
+                <label for="inputState" class="form-label">City</label>
+                <select id="inputState" name="city" class="form-select">
                 <option selected>Choose...</option>
                 <option>...</option>
                 </select>
             </div>
             <div class="col-md-2">
                 <label for="inputZip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
+                <input type="text" name="zip" class="form-control" id="inputZip">
             </div>
 
             <label for="" class="px-2 p-0 m-0 mt-5 mb-3 fw-bold ">Job/Career* <hr class=" p-0 m-0"></label>
@@ -81,58 +86,56 @@
 
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Experiences</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Your Total Job/Career Experiences Years & Months Ex:(5 Y, 10 M)">
+                <input type="text" name="experiences" class="form-control" id="inputEmail4" placeholder="Your Total Job/Career Experiences Years & Months Ex:(5 Y, 10 M)">
             </div>
 
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Organization</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Current Organization">
+                <input type="text" name="organization" class="form-control" id="inputEmail4" placeholder="Current Organization">
             </div>
 
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Position/Designation</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Your Current Position/Designation">
+                <input type="text" name="position_designation" class="form-control" id="inputEmail4" placeholder="Your Current Position/Designation">
             </div>
 
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Reference</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Reference (if any; write his or her name):">
+                <input type="text" class="form-control" id="inputEmail4" name="reference" placeholder="Reference (if any; write his or her name):">
             </div>
 
             <div class="col-md-12">
                 <label for="inputEmail4" class="form-label">About Your Self</label>
-                <textarea class="form-control" name="" id="" cols="30" rows="10">Your profile ( please write a paragraph about yourself not exceeding 100 words):
+                <textarea class="form-control" name="abnout_self" id="" cols="30" rows="10">Your profile ( please write a paragraph about yourself not exceeding 100 words):
                 </textarea>
             </div>
 
             <div class="col-md-4">
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Your Photo</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" name="profile_photo" type="file" id="formFile">
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Your CV</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" name="cv" type="file" id="formFile">
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Your signature(if available)</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" name="signature" type="file" id="formFile">
                 </div>
             </div>
-
-
 
 
             <hr class="p-0 mt-5">
             <div class="col-6 px-3">
                 <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <input class="form-check-input" name="terms_conditins" type="checkbox" id="gridCheck">
                 <label class="form-check-label" for="gridCheck">
                     Accept the <a href=""> Terms</a> & <a href=""> Conditions</a>. 
                 </label>
@@ -140,22 +143,16 @@
             </div>
 
 
-            <div class="col-6 text-end  px-3">               
-                <button type="submit" class="btn btn-success p-2 px-5">Submit</button>
+            <div class="col-6 text-end  px-3">       
+                <input type="hidden" name="New_Member">        
+                <button type="submit"  class="btn btn-success p-2 px-5">Submit</button>
             </div>
 
-        </form>
+        </form>     
     </div>
+
+    <div class="mess mt-3"></div>
 </div>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -174,5 +171,28 @@
   <!-- Custom js for this page-->
   <script src="assets/js/dashboard.js"></script>
   <!-- End custom js for this page-->
+
+
+
+  <script>
+    $(document).ready(function(){
+        $("#newmember").on('submit',(function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: 'controller/membership/sql.php',
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData:false,
+                success: function(data) {
+                    $(".mess").html(data);
+                }
+            });
+        }));
+    });
+</script>
+
+
 </body>
 </html> 
