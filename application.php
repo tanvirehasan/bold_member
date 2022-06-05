@@ -1,6 +1,5 @@
 <?php include_once "layout/header.php"; ?>
 
-
 <div class="card bg-white">
     <h3 class="p-3 text-info"><i class="material-icons check" >groupadd</i> New Members Applications</h3>
 </div>
@@ -13,72 +12,51 @@
             <th>Phone No.</th>
             <th>Organization</th>
             <th>Designation</th>
+            <th>Application Status</th>
         </tr>
         <?php 
             $i=1;
             $data = SelectData('members','');
             while ($row = $data->fetch_object()) {?>
-                <tr >
+                <tr onclick="popup('view/membership/profile_popup.php?id=<?=$row->id?>')" >
                     <td><?=$i++?></td>
-                    <td><?=$row->name?></td>
+                    <td><strong><?=$row->name?></strong></td>
                     <td><?=$row->email?></td>
                     <td><?=$row->phone_number?></td>
                     <td><?=$row->organization?></td>
                     <td><?=$row->position_designation?></td>
+                    <td>
+                        <?= ($row->membership_status==1) ? "Approved <i class='fas fa-badge-check text-success'></i>"  : "In Review <i class='fad fa-hourglass-half text-warning'></i>" ; ?> 
+                    </td>
                 </tr>            
         <?php } ?>
     </table>      
 </div>
 
-<section class="bg-white p-5 mt-5">
-<div class="row">
-    <div class="col-12">
-        <h4 class="fw-bold text-uppercase py-3 bg-success">Profile</h4>
+
+
+
+<script type="text/javascript">
+    function popup(url) {
+        $.ajax({
+            url: url,
+            method: "POST",
+            success: function(data) {
+                $("#home_popup").html(data);
+                $("#dataModal").modal("show");
+            },
+        });
+    }
+</script>
+<!-- Modal for category -->
+<div class="modal fade" id="dataModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" id="home_popup">
     </div>
-
-    <div class="col-md-2">
-        <img src="uploads/member/profile_pic/profile.jfif" alt="" style="width:100%;">
-    </div>
-    <div class="col-md-6 d-flex align-items-end">
-        <div class="profile">
-            <h1>Md Tanvir Hasan</h1>
-            <h4>Founder & CEO, dotOrbit</h4>
-            <p class="p-0 m-0"><i class="material-icons p-0 m-0" >phone</i> tanvir@gmail.com</p>
-            <p class="p-0 m-0"><i class="material-icons p-0 m-0" >email</i> +018436405147</p>
-        </div>
-    </div>
-
-    <div class="col-md-6 py-5">
-        <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.
-
-        I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.
-        </p>
-
-        <b class="m-0 p-0">Info</b>
-        <hr class="m-0 p-0" >
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="lines"><b>Birthday</b> : <p>4th april 1998</p></div>
-                <div class="lines"><b>Age</b> : <p>30  Years</p></div>
-
-            </div>
-            <div class="col-md-6"></div>
-        </div>
-
-
-    </div>
-
-
-
-
-
-
+  </div>
 </div>
-</section>
-
-
-
 
 
 <?php include_once "layout/footer.php"; ?>
+
+

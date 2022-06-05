@@ -174,7 +174,7 @@
 
 
 
-  <script>
+ <script>
     $(document).ready(function(){
         $("#newmember").on('submit',(function(e) {
             e.preventDefault();

@@ -1,6 +1,7 @@
 <?php
 
 include "../../config/conn.php";
+include "../../config/function.php";
 
 
 if (isset($_POST['New_Member'])) {
@@ -20,7 +21,7 @@ if (isset($_POST['New_Member'])) {
     $organization           = $_POST['organization'];
     $position_designation   = $_POST['position_designation'];
     $reference              = $_POST['reference'];
-    $abnout_self            = $_POST['abnout_self'];
+    $abnout_self            = htmlspecialchars($_POST['abnout_self']);
     $terms_conditins        = (isset($_POST['terms_conditins'])) ? 1 : 0 ;
 
     //File
@@ -105,6 +106,47 @@ if (isset($_POST['New_Member'])) {
         }
     }
 }
+
+
+if (isset($_POST['status_change'])) {
+   
+    $id=$_POST['id'];
+    $status = ($_POST['membership_category']==0) ? '0' : '1' ;
+    $membership_category=$_POST['membership_category'];
+
+    $insert = "UPDATE `members` SET `membership_category`='$membership_category', `membership_status`='$status' where  id='$id' ";
+        if ($conn->query($insert) === TRUE) {
+            echo "<div class='alert alert-success' role='alert'>
+                    <strog>Successfuly</strog> Updated! 
+                </div>";
+            if ($status==1) {
+               SMS_API($_POST['phone_number'], "Contractions! Your application has been approved. Please check your email. Thanks-BOLD");
+            }
+
+        }else{
+            echo "Error: " . $insert . "<br>" . $conn->error;
+        }     
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ?>
