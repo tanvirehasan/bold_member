@@ -90,7 +90,9 @@ p{margin: 0px;padding: 0px;}
                 cache: false,
                 processData:false,
                 success: function(data) {
-                    $(".mess").html(data);                                    
+                    $(".mess").html(data); 
+                     $("#dataModal").modal("hide");
+
                 }
             });
         }));

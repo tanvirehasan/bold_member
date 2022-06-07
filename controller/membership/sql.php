@@ -1,10 +1,10 @@
 <?php
+    include "../../config/conn.php";
+    include "../../config/function.php";
+?>
 
-include "../../config/conn.php";
-include "../../config/function.php";
 
-
-if (isset($_POST['New_Member'])) {
+<?php if (isset($_POST['New_Member'])) {
 
 
     $name                   = $_POST['name'];
@@ -91,16 +91,23 @@ if (isset($_POST['New_Member'])) {
                     )";
 
         if ($conn->query($sql) === TRUE) {?>
-
             <div class="successpage d-flex align-items-center justify-content-center ">
                 <div class="text-center">
                     <h1><i class="material-icons check" >check</i></h1>
                     <h2>Thank You!</h2>
                     <h4>Your Application Successfully Submitted</h4>
                     <a href="index.php">Click Here</a>
+                    <?php 
+                        SMS_API("$phone_number", "Contractions!Your Application Successfully Submitted. Please check your email. Thanks-BOLD");
+                        email_send(
+                            'Congraculatins! BOLD Membership Application Submited',
+                            "<span style='color:#239B56' >Congratulations!</span>",
+                            'Dear'.$name.', <br>Your application Successfuly submited to review. we are very short time get back within 7 days',
+                            "$email",
+                        );                                       
+                    ?>
                 </div>
-            </div>
-                     
+            </div>                     
        <?php }else{
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -131,22 +138,36 @@ if (isset($_POST['status_change'])) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
+
+
+<?php 
+if (isset($_GET['listview'])) {?> 
+<table class="table table-striped  table-hover">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone No.</th>
+            <th>Organization</th>
+            <th>Designation</th>
+            <th>Application Status</th>
+        </tr>
+        <?php 
+            $i=1;
+            $data = SelectData('members','');
+            while ($row = $data->fetch_object()) {?>
+                <tr onclick="popup('view/membership/profile_popup.php?id=<?=$row->id?>')" >
+                    <td><?=$i++?></td>
+                    <td><strong><?=$row->name?></strong></td>
+                    <td><?=$row->email?></td>
+                    <td><?=$row->phone_number?></td>
+                    <td><?=$row->organization?></td>
+                    <td><?=$row->position_designation?></td>
+                    <td>
+                        <?= ($row->membership_status==1) ? "Approved <i class='fas fa-badge-check text-success'></i>"  : "In Review <i class='fad fa-hourglass-half text-warning'></i>" ; ?> 
+                    </td>
+                </tr>            
+        <?php } ?>
+    </table> 
+<?php } ?>

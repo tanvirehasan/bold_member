@@ -1,19 +1,14 @@
 <?php 
 
-// OTP System
-function SMS_API($number, $messages){
-  $number =$number; 
-	$messages = $messages;	
-	$url = 'https://sms.tense.com.bd/api-sendsms?user=nasiruddin&password=01309138472&campaign=BOLD&number='.$number.'&text='.rawurldecode($messages);
-	$gateway = preg_replace("/ /", "%20", $url);
-	$result = file_get_contents($gateway);
-	$decode = json_decode($result, true);
-	return $decode;
-}
+	include "config/function.php";
 
-
-
-
-  
+	email_send(
+		'Congraculatins! BOLD Membership Application Submited',
+		"<span style='color:#239B56' >Congratulations!</span>",
+		'Your application Successfuly submited to review. we are very short time get back within 7 days',
+		'i.tanvir.t@gmail.com',
+	);
 
 ?>
+
+

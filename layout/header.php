@@ -59,7 +59,7 @@
                     </a>
                   </div>
                   <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="category.php">
+                    <a class="mdc-drawer-link" href="membership_category.php">
                       Category
                     </a>
                   </div>

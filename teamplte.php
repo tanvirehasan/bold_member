@@ -1,97 +1,19 @@
-<?php 
-
-// OTP System
-function SMS_API($number, $messages){
-  $number =$number; 
-	$messages = $messages;	
-	$url = 'https://sms.tense.com.bd/api-sendsms?user=nasiruddin&password=01309138472&campaign=BOLD&number='.$number.'&text='.rawurldecode($messages);
-	$gateway = preg_replace("/ /", "%20", $url);
-	$result = file_get_contents($gateway);
-	$decode = json_decode($result, true);
-	return $decode;
-}
-
-
-//SELECT
-function SelectData($TableName, $moresql){
-	global $conn;
-	$sql = "SELECT * FROM $TableName $moresql";
-	$select = mysqli_query($conn, $sql);
-	return $select;
-}
-//update data
-function UpdateData($table_name, $more){
-	global $conn;
-	$sql = "UPDATE {$table_name} SET {$more} ";
-	$update = mysqli_query($conn,$sql);
-	return $update;
-}
-
-
-
-//Image UPload with compress
-function compressImage($source, $destination, $quality) { 
-    $imgInfo = getimagesize($source); 
-    $mime = $imgInfo['mime']; 
-     switch($mime){ 
-        case 'image/jpeg': 
-            $image = imagecreatefromjpeg($source); 
-            break; 
-        case 'image/png': 
-            $image = imagecreatefrompng($source); 
-            break; 
-        case 'image/gif': 
-            $image = imagecreatefromgif($source); 
-            break; 
-        default: 
-            $image = imagecreatefromjpeg($source); 
-    } 
-     
-    imagejpeg($image, $destination, $quality);    
-    return $destination; 
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//eamil
-function email_send($subject, $title, $text, $receiver){
-	  
-$body ="<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:o='urn:schemas-microsoft-com:office:office'>
 <head>
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 	<meta name='x-apple-disable-message-reformatting'>
-	<title>BOLD</title>
+	<title></title>
+	<!--[if mso]>
+	<noscript>
+		<xml>
+			<o:OfficeDocumentSettings>
+				<o:PixelsPerInch>96</o:PixelsPerInch>
+			</o:OfficeDocumentSettings>
+		</xml>
+	</noscript>
+	<![endif]-->
 	<style>
 		table, td, div, h1, p {font-family: Arial, sans-serif;}
 	</style>
@@ -111,20 +33,21 @@ $body ="<!DOCTYPE html>
 							<table role='presentation' style='width:100%;border-collapse:collapse;border:0;border-spacing:0;'>
 								<tr>
 									<td style='padding:0 0 36px 0;color:#153643;'>
-										<h1 style='font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;'>".$title."</h1>
-										<p style='margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;'>".$text."</p>
+										<h1 style='font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;'>Creating Email Magic</h1>
+										<p style='margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan et dictum, nisi libero ultricies ipsum, posuere neque at erat.</p>
+										<p style='margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;'><a href='http://www.example.com' style='color:#ee4c50;text-decoration:underline;'>In tempus felis blandit</a></p>
 									</td>
 								</tr>
 							</table>
 						</td>
 					</tr>
 					<tr>
-						<td style='padding:30px;background:#1E8449;'>
+						<td style='padding:30px;background:#0B6406;'>
 							<table role='presentation' style='width:100%;border-collapse:collapse;border:0;border-spacing:0;font-size:9px;font-family:Arial,sans-serif;'>
 								<tr>
 									<td style='padding:0;width:50%;' align='left'>
 										<p style='margin:0;font-size:14px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff;'>
-											&reg;©2020 (BOLD) Bangladesh Organization for Learning & Development ".date('Y')."<br/><a href='http://www.example.com' style='color:#ffffff;text-decoration:underline;'>Unsubscribe</a>
+											&reg; BOLD, Somewhere .date('Y').<br/><a href='http://www.example.com' style='color:#ffffff;text-decoration:underline;'>Unsubscribe</a>
 										</p>
 									</td>
 									<td style='padding:0;width:50%;' align='right'>
@@ -150,20 +73,3 @@ $body ="<!DOCTYPE html>
 </body>
 </html>
 
-";
-
-$header = "From:tanvirhasanbcse@gmail.com";
-$header .= "MIME-Version:1.0\r\n";
-$header .= "Content-type:text/html; charset=ISO-8859-1\r\n";
-
-if(mail($receiver, $subject, $body, $header)){
-     "Email sent successfully to $receiver";
-}else{
-    "Sorry, failed while sending mail!";
-}
-
-return $body;
-
-}
-
-?>
