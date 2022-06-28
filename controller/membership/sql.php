@@ -1,10 +1,34 @@
 <?php
     include "../../config/conn.php";
     include "../../config/function.php";
-?>
+
+//Phone Number Check
+if (isset($_POST['phonenumber_check'])) {
+    if (SelectData('members',"where phone_number={$_POST['phonenumber_check']}")->num_rows>0) {
+       echo 1;
+    }else {echo 0;}
+}
+
+//Email Check
+if (isset($_POST['email_id'])) {
+    if (SelectData('members',"where email='{$_POST['email_id']}'")->num_rows>0) {
+       echo 1;
+    }else {
+        echo 0;    
+    }
+
+}
 
 
-<?php if (isset($_POST['New_Member'])) {
+
+
+
+
+
+
+//New_Member
+
+if (isset($_POST['New_Member'])) {
 
 
     $name                   = $_POST['name'];
@@ -127,7 +151,14 @@ if (isset($_POST['status_change'])) {
                     <strog>Successfuly</strog> Updated! 
                 </div>";
             if ($status==1) {
-               SMS_API($_POST['phone_number'], "Contractions! Your application has been approved. Please check your email. Thanks-BOLD");
+              SMS_API($_POST['phone_number'], "Contractions! Your application has been approved as a ".cat_name($membership_category,'cat_name').". Please check your email. Thanks-BOLD");
+
+                //invoice Crate
+                $invoice_no = "B".date('my').rand(0,100);
+                $invoice_date =date('M d,Y');
+                $invoice_amount = cat_name($membership_category,'cat_price');
+                InsertData("invoice", "invoice_no, invoice_date, member_id", "'$invoice_no', '$invoice_date', '$invoice_amount', '$id'");              
+
             }
 
         }else{

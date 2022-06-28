@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="shortcut icon" href="uploads/brand/logo.png" />
+  <link href="https://kit-pro.fontawesome.com/releases/v5.15.2/css/pro.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -34,16 +35,16 @@
         <form class="row g-3 p-5" method="post" id="newmember" enctype="multipart/form-data">
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Name</label>
-                <input type="text" name="name" class="form-control" id="inputEmail4">
+                <input type="text" name="name" class="form-control" >
             </div>
             <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Phone Number</label>
-                <input type="text" name="phone_number" class="form-control" id="inputPassword4">
+                <label for="phone_number" class="form-label">Phone Number <span id="phone_number_check" ></span> </label>
+                <input type="text" onkeyup="phone_number_check(this.value)" name="phone_number" class="form-control" id="phone_number">                
             </div>
 
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" name="email" class="form-control" id="inputEmail4">
+                <label for="inputEmail4" class="form-label">Email <span id="email_mess" ></span></label>
+                <input type="text" name="email" class="form-control" onkeyup="Emailid_check(this.value)" >
             </div>
             <div class="col-md-6">
                 <label for="inputPassword4" class="form-label">Password</label>
@@ -133,7 +134,7 @@
 
 
             <hr class="p-0 mt-5">
-            <div class="col-6 px-3">
+            <div class="col-md-6 col-12 px-3">
                 <div class="form-check">
                 <input class="form-check-input" name="terms_conditins" type="checkbox" id="gridCheck">
                 <label class="form-check-label" for="gridCheck">
@@ -143,9 +144,11 @@
             </div>
 
 
-            <div class="col-6 text-end  px-3">       
+            <div class="col-md-6 col-12 text-end  px-3">       
+                <img class="loding" style="display:none;" src="uploads/brand/loding.gif" >
+                <img class="loding me-5" style="display:none;"  src="uploads/brand/lodingg.gif" height="30">
                 <input type="hidden" name="New_Member">        
-                <button type="submit"  class="btn btn-success p-2 px-5">Submit</button>
+                <button type="submit" id="usersave"  class="col-md-4 col-12 btn btn-success p-2 px-5">Submit</button>
             </div>
 
         </form>     
@@ -171,28 +174,7 @@
   <!-- Custom js for this page-->
   <script src="assets/js/dashboard.js"></script>
   <!-- End custom js for this page-->
-
-
-
- <script>
-    $(document).ready(function(){
-        $("#newmember").on('submit',(function(e) {
-            e.preventDefault();
-            $.ajax({
-                type: 'POST',
-                url: 'controller/membership/sql.php',
-                data: new FormData(this),
-                contentType: false,
-                cache: false,
-                processData:false,
-                success: function(data) {
-                    $(".mess").html(data);
-                }
-            });
-        }));
-    });
-</script>
-
+  <script src="assets/js/membership.js"></script>
 
 </body>
 </html> 

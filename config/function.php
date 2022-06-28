@@ -12,6 +12,16 @@ function SMS_API($number, $messages){
 }
 
 
+// MySQL INSERT statement
+function InsertData($table_name, $cols, $values){
+    global $conn;
+    $query = "INSERT INTO $table_name ($cols) VALUES ($values)";
+    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+    return $result;
+}
+
+
+
 //SELECT
 function SelectData($TableName, $moresql){
 	global $conn;
@@ -51,8 +61,16 @@ function compressImage($source, $destination, $quality) {
     return $destination; 
 } 
 
+//Row Counts
+function rowcount($TableName,$moresql){
+	return SelectData($TableName, $moresql)->num_rows;
+}
 
-
+//catagory_name
+function cat_name($cid,$data){
+	$row = SelectData("membership_category", "where cat_id='$cid' ")->fetch_object();
+	return $row->$data;
+}
 
 
 
