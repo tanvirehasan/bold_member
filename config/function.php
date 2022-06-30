@@ -21,7 +21,6 @@ function InsertData($table_name, $cols, $values){
 }
 
 
-
 //SELECT
 function SelectData($TableName, $moresql){
 	global $conn;
@@ -29,6 +28,7 @@ function SelectData($TableName, $moresql){
 	$select = mysqli_query($conn, $sql);
 	return $select;
 }
+
 //update data
 function UpdateData($table_name, $more){
 	global $conn;
@@ -36,7 +36,6 @@ function UpdateData($table_name, $more){
 	$update = mysqli_query($conn,$sql);
 	return $update;
 }
-
 
 
 //Image UPload with compress
@@ -71,27 +70,6 @@ function cat_name($cid,$data){
 	$row = SelectData("membership_category", "where cat_id='$cid' ")->fetch_object();
 	return $row->$data;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -142,7 +120,7 @@ $body ="<!DOCTYPE html>
 								<tr>
 									<td style='padding:0;width:50%;' align='left'>
 										<p style='margin:0;font-size:14px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff;'>
-											&reg;©2020 (BOLD) Bangladesh Organization for Learning & Development ".date('Y')."<br/><a href='http://www.example.com' style='color:#ffffff;text-decoration:underline;'>Unsubscribe</a>
+											© (BOLD) Bangladesh Organization for Learning & Development ".date('Y')."<br/><a href='http://www.example.com' style='color:#ffffff;text-decoration:underline;'>Unsubscribe</a>
 										</p>
 									</td>
 									<td style='padding:0;width:50%;' align='right'>

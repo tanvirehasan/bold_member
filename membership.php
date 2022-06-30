@@ -1,7 +1,7 @@
 <?php 
     include "config/conn.php";
+    include "config/function.php";
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +35,7 @@
         <form class="row g-3 p-5" method="post" id="newmember" enctype="multipart/form-data">
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Name</label>
-                <input type="text" name="name" class="form-control" >
+                <input type="text" name="name" class="form-control" require>
             </div>
             <div class="col-md-6">
                 <label for="phone_number" class="form-label">Phone Number <span id="phone_number_check" ></span> </label>
@@ -67,14 +67,24 @@
 
             <div class="col-md-6">
                 <label for="inputCity" class="form-label">Country</label>
-                <input type="text" name="country" class="form-control" id="inputCity">
+                <select id="inputState" name="country" class="form-select" id="inputCity">
+                        <option>Choose...</option>
+
+                    <?php 
+                        $select = SelectData('country','');
+                        while ($data = $select->fetch_object()) {?>
+                           <option value="<?=$data->nicename?>"><?=$data->nicename?></option>
+                        <?php } ?>                    
+                    
+                </select>
+
+
+
+
             </div>
             <div class="col-md-4">
                 <label for="inputState" class="form-label">City</label>
-                <select id="inputState" name="city" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-                </select>
+                <input type="text" id="inputState" name="city" class="form-control"> 
             </div>
             <div class="col-md-2">
                 <label for="inputZip" class="form-label">Zip</label>

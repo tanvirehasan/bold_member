@@ -22,10 +22,6 @@ if (isset($_POST['email_id'])) {
 
 
 
-
-
-
-
 //New_Member
 
 if (isset($_POST['New_Member'])) {
@@ -142,6 +138,7 @@ if (isset($_POST['New_Member'])) {
 if (isset($_POST['status_change'])) {
    
     $id=$_POST['id'];
+    $email=$_POST['email']; 
     $status = ($_POST['membership_category']==0) ? '0' : '1' ;
     $membership_category=$_POST['membership_category'];
 
@@ -154,10 +151,19 @@ if (isset($_POST['status_change'])) {
               SMS_API($_POST['phone_number'], "Contractions! Your application has been approved as a ".cat_name($membership_category,'cat_name').". Please check your email. Thanks-BOLD");
 
                 //invoice Crate
-                $invoice_no = "B".date('my').rand(0,100);
+                $invoice_no = "B".date('my').rand(0,9999);
                 $invoice_date =date('M d,Y');
                 $invoice_amount = cat_name($membership_category,'cat_price');
-                InsertData("invoice", "invoice_no, invoice_date, member_id", "'$invoice_no', '$invoice_date', '$invoice_amount', '$id'");              
+                InsertData("invoice", "invoice_no, invoice_date, invoice_amount,member_id, member_catagory", "'$invoice_no', NOW(),'$invoice_amount', '$id', $membership_category");   
+                email_send(
+                            'BOLD - Congraculatins! Your application has been approv',
+                            "<span style='color:#239B56' >Congratulations!</span>",
+                            "Contractions! Your application has been approved as a <b>".cat_name($membership_category,'cat_name')."</b>
+                            Please click this link for your payment : http://localhost/bold_member/payment.php?invoice=".$invoice_no."&id=".$id." 
+                            <br/>Thanks-BOLD"
+                            ,
+                            "$email",
+                        );            
 
             }
 
