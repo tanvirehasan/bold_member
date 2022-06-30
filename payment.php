@@ -37,7 +37,7 @@
 </div>
 
     
-        <form class="row g-3 p-5" method="post" id="newmember" enctype="multipart/form-data">
+        <form class="row g-3 p-5" method="POST" action="" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-md-10">
                     <p>Name: <?=$row->name?></p> 
@@ -74,8 +74,9 @@
                 </table>               
             </div>  
 
+
             <div class="buttornsdfsdf text-end">
-                <button class="btn btn-success px-5" type="submit">Pay</button>
+                <input class="btn btn-success px-5" name="paynnow" type="submit" value="Pay">
             </div>      
         </form>     
     </div>
@@ -83,6 +84,30 @@
     <div class="mess mt-3"></div>
 </div>
 
+
+
+<?php 
+
+
+        if (isset($_POST['paynnow'])) {
+
+            echo "Hello";
+
+            payment(
+                $row->name,
+                $row->email,
+                $row->address,
+                $row->city,
+                $row->zip,
+                $row->country,
+                $row->phone_number,
+                $row->invoice_amount,
+                $row->invoice_no
+
+            );
+        }
+
+?>
 
   <!-- plugins:js -->
   <script src="assets/vendors/js/vendor.bundle.base.js"></script>

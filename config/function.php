@@ -73,11 +73,6 @@ function cat_name($cid,$data){
 
 
 
-
-
-
-
-
 //eamil
 function email_send($subject, $title, $text, $receiver){
 	  
@@ -161,5 +156,87 @@ if(mail($receiver, $subject, $body, $header)){
 return $body;
 
 }
+
+function payment( $cus_name,$cus_email,$cus_add1,$cus_city,$cus_postcode,$cus_country,$cus_phone,$total_amount,$tran_id ){
+
+	$post_data = array();
+	$post_data['store_id'] = "dotor6195444a778bb";
+	$post_data['store_passwd'] = "dotor6195444a778bb@ssl";
+	$post_data['total_amount'] = $total_amount;
+	$post_data['currency'] = "BDT";
+	$post_data['tran_id'] = $tran_id;
+	$post_data['success_url'] = "http://member.bold.org.bd/success.php";
+	$post_data['fail_url'] = "http://member.bold.org.bd/fail.php";
+	$post_data['cancel_url'] = "http://member.bold.org.bd/cancel.php";
+
+
+
+	# CUSTOMER INFORMATION
+	$post_data['cus_name'] = $cus_name;
+	$post_data['cus_email'] = $cus_email;
+	$post_data['cus_add1'] = $cus_add1;
+	$post_data['cus_city'] = $cus_city;
+	$post_data['cus_postcode'] = $cus_postcode;
+	$post_data['cus_country'] = $cus_country;
+	$post_data['cus_phone'] = $cus_phone;
+
+
+	# REQUEST SEND TO SSLCOMMERZ
+	$direct_api_url = "https://securepay.sslcommerz.com/gwprocess/v3/api.php";
+
+	$handle = curl_init();
+	curl_setopt($handle, CURLOPT_URL, $direct_api_url);
+	curl_setopt($handle, CURLOPT_TIMEOUT, 30);
+	curl_setopt($handle, CURLOPT_CONNECTTIMEOUT, 30);
+	curl_setopt($handle, CURLOPT_POST, 1 );
+	curl_setopt($handle, CURLOPT_POSTFIELDS, $post_data);
+	curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, FALSE); # KEEP IT FALSE IF YOU RUN FROM LOCAL PC
+
+
+	$content = curl_exec($handle);
+
+	$code = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+
+	if($code == 200 && !( curl_errno($handle))) {
+		curl_close( $handle);
+		$sslcommerzResponse = $content;
+	} else {
+		curl_close( $handle);
+		echo "FAILED TO CONNECT WITH SSLCOMMERZ API";
+		exit;
+	}
+
+	# PARSE THE JSON RESPONSE
+	$sslcz = json_decode($sslcommerzResponse, true );
+
+	if(isset($sslcz['GatewayPageURL']) && $sslcz['GatewayPageURL']!="" ) {
+		echo "<meta http-equiv='refresh' content='0;url=".$sslcz['GatewayPageURL']."'>";
+		exit;
+	} else {
+		echo "JSON Data parsing error!";
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
