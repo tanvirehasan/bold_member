@@ -74,12 +74,8 @@
                         $select = SelectData('country','');
                         while ($data = $select->fetch_object()) {?>
                            <option value="<?=$data->nicename?>"><?=$data->nicename?></option>
-                        <?php } ?>                    
-                    
+                        <?php } ?>                   
                 </select>
-
-
-
 
             </div>
             <div class="col-md-4">
