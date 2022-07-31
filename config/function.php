@@ -1,5 +1,6 @@
 <?php 
 
+
 // OTP System
 function SMS_API($number, $messages){
   $number =$number; 
@@ -143,25 +144,52 @@ $body ="<!DOCTYPE html>
 
 ";
 
-$header = "From:tanvirhasanbcse@gmail.com";
-$header .= "MIME-Version:1.0\r\n";
-$header .= "Content-type:text/html; charset=ISO-8859-1\r\n";
 
-if(mail($receiver, $subject, $body, $header)){
-     "Email sent successfully to $receiver";
-}else{
-    "Sorry, failed while sending mail!";
+    include('smtp/PHPMailerAutoload.php');
+
+	$mail = new PHPMailer(); 
+// 	$mail->SMTPDebug  = 1;
+	$mail->IsSMTP(); 
+	$mail->SMTPAuth = true; 
+	$mail->SMTPSecure = 'tls'; 
+	$mail->Host = "smtp.gmail.com";
+	$mail->Port = 587; 
+	$mail->IsHTML(true);
+	$mail->CharSet = 'UTF-8';
+	$mail->Username = "tanvirhasanbcse@gmail.com";
+	$mail->Password = "brbtsohruudbqmwk";
+	$mail->SetFrom("tanvirhasanbcse@gmail.com", "BOLD");
+	$mail->addBCC("team@bold.org.bd", "BOLD Team");
+	$mail->Subject = $subject;
+	$mail->Body =$body;
+	$mail->AddAddress($receiver);
+	$mail->SMTPOptions=array('ssl'=>array(
+		'verify_peer'=>false,
+		'verify_peer_name'=>false,
+		'allow_self_signed'=>false
+	));
+	if(!$mail->Send()){
+		$mail->ErrorInfo;
+	    }else{
+		return 'Sent';
+	}
+	
+	
+	return $body;
+
+
 }
 
-return $body;
 
-}
+
+
+//SSL Payment
 
 function payment( $cus_name,$cus_email,$cus_add1,$cus_city,$cus_postcode,$cus_country,$cus_phone,$total_amount,$tran_id ){
 
 	$post_data = array();
-	$post_data['store_id'] = "dotor6195444a778bb";
-	$post_data['store_passwd'] = "dotor6195444a778bb@ssl";
+	$post_data['store_id'] = "bold001live";
+	$post_data['store_passwd'] = "bold001live58259";
 	$post_data['total_amount'] = $total_amount;
 	$post_data['currency'] = "BDT";
 	$post_data['tran_id'] = $tran_id;
@@ -179,10 +207,12 @@ function payment( $cus_name,$cus_email,$cus_add1,$cus_city,$cus_postcode,$cus_co
 	$post_data['cus_postcode'] = $cus_postcode;
 	$post_data['cus_country'] = $cus_country;
 	$post_data['cus_phone'] = $cus_phone;
+	
+	
 
 
 	# REQUEST SEND TO SSLCOMMERZ
-	$direct_api_url = "https://securepay.sslcommerz.com/gwprocess/v3/api.php";
+	$direct_api_url = "https://securepay.sslcommerz.com/gwprocess/v4/api.php";
 
 	$handle = curl_init();
 	curl_setopt($handle, CURLOPT_URL, $direct_api_url);
@@ -191,7 +221,7 @@ function payment( $cus_name,$cus_email,$cus_add1,$cus_city,$cus_postcode,$cus_co
 	curl_setopt($handle, CURLOPT_POST, 1 );
 	curl_setopt($handle, CURLOPT_POSTFIELDS, $post_data);
 	curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, FALSE); # KEEP IT FALSE IF YOU RUN FROM LOCAL PC
+	curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false); # KEEP IT FALSE IF YOU RUN FROM LOCAL PC
 
 
 	$content = curl_exec($handle);

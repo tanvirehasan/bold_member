@@ -1,0 +1,272 @@
+[30-Jun-2022 05:18:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:11 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:12 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:14 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:15 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:15 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:20 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:21 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:22 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:23 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:24 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:25 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:26 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:27 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:28 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:29 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:30 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:31 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:32 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:33 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:34 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:35 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:36 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:37 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:38 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:39 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:40 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:41 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:42 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:43 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:44 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:45 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:46 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:47 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:48 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:49 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:50 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:51 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:52 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:54 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:55 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:56 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:57 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:58 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:18:59 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:00 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:02 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:03 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:04 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:05 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:06 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:07 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:08 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:11 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:12 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:13 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:14 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:15 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:16 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159
+[30-Jun-2022 05:19:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php:159
+Stack trace:
+#0 {main}
+  thrown in /home/boldorg/public_html/member.bold.org.bd/controller/membership/sql.php on line 159

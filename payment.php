@@ -4,7 +4,7 @@
 
     if (isset($_GET['invoice'], $_GET['id'])) {  
 
-    $data = SelectData('members',"INNER JOIN invoice on  members.id=invoice.member_id WHERE id={$_GET['id']} ");
+    $data = SelectData('members',"INNER JOIN invoice on  members.membership_id=invoice.member_id WHERE membership_id={$_GET['id']} ");
     $row = $data->fetch_object();    
 ?>
 
@@ -42,12 +42,12 @@
                 <div class="col-md-10">
                     <p>Name: <?=$row->name?></p> 
                     <p>Email: <?=$row->email?></p>
-                    <p>Phone No.: <?=$row->phone_number?></p>
+                    <p>Phone No.: <?php echo $phone_number=$row->phone_number?></p>
                 </div>
                 <div class="col-md-2">
                     <p>Date: <?=$row->invoice_date?> </p>
                     <p>Due date: <?php echo date('d, m, Y',strtotime("$row->invoice_date". "+30day"));?> </p>
-                    <p>Payment: <strong> <?=($row->payment_status==0) ? "<span class='text-danger' >Unpaid</span>" : "<span class='text-success'>Unpaid</span>" ;?></strong></p>
+                    <p>Payment: <strong> <?=($row->payment_status==0) ? "<span class='text-danger' >Unpaid</span>" : "<span class='text-success'>Paid</span>" ;?></strong></p>
                 </div>
 
                 <table class=" table mt-5">
@@ -91,8 +91,6 @@
 
         if (isset($_POST['paynnow'])) {
 
-            echo "Hello";
-
             payment(
                 $row->name,
                 $row->email,
@@ -105,6 +103,8 @@
                 $row->invoice_no
 
             );
+            
+            
         }
 
 ?>
@@ -130,4 +130,8 @@
 </html> 
 
 
-<?php } ?>
+<?php }else{
+
+    header('location:index.php');
+
+} ?>

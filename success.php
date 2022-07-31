@@ -4,8 +4,8 @@
     include "config/function.php";
 
     $val_id=urlencode($_POST['val_id']);
-    $store_id=urlencode("dotor6195444a778bb");
-    $store_passwd=urlencode("dotor6195444a778bb@ssl");
+    $store_id=urlencode("bold001live");
+    $store_passwd=urlencode("bold001live58259");
     $requested_url = ("https://securepay.sslcommerz.com/validator/api/validationserverAPI.php?val_id=".$val_id."&store_id=".$store_id."&store_passwd=".$store_passwd."&v=1&format=json");
 
     $handle = curl_init();
@@ -25,11 +25,19 @@
         # TRANSACTION INFO
         $status = $result->status;
         $tran_date = $result->tran_date;
-        echo $tran_id = $result->tran_id;
+        $tran_id = $result->tran_id;
         $card_type = $result->card_type;
-        echo $renewdate = date('Y-m-d',strtotime("$tran_date". "+1year"));
+        $renewdate = date('Y-m-d',strtotime("$tran_date". "+1year"));
 
-        UpdateData("invoice","payment_status='1', tran_id='$tran_id', card_type='$card_type', date_time='$tran_date', period_start_date='$tran_date', period_end_date='$renewdate' WHERE  invoice_no='$tran_id'  ");
+        UpdateData("invoice","payment_status='1', tran_id='$tran_id', card_type='$card_type', date_time='$tran_date', period_start_date='$tran_date', period_end_date='$renewdate' WHERE  invoice_no='$tran_id'");
+        
+        // SMS_API("$row->phone_number", "Contractions!Your Pyment Successfully Done. Thanks-BOLD");
+        // email_send(
+        //     'Congratulations!Your Pyment Successfully Done',
+        //     "<span style='color:#239B56' >Pyment Success</span>",
+        //     'Dear'.$row->name.', <br>Your Pyment Successfully Done. Thanks-BOLD',
+        //     "$row->email"
+        // ); 
 
     } else {
         echo "Failed to connect with SSLCOMMERZ";
